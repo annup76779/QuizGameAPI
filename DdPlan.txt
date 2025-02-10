@@ -1,0 +1,20 @@
+Tables
+    - Subject Area
+        - ID
+        - Name
+    - Test
+        - ID
+        - subjectId         - Foreign Key to Subject Table
+        - Title
+        - DateCreated
+        - Status            - Draft, Published, Closed
+    - Questions
+        - ID                - Primary
+        - testId            - Foreign Key to Test Table
+        - questionText
+        - score
+        - correctAnswer
+    - Answers
+        - ID
+        - questionID        - Foreign Key for Answer's Table
+        - answerText

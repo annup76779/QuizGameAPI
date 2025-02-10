@@ -1,0 +1,37 @@
+- Developing Quiz game
+	- Divided into Django backend and React frontend
+
+- Django Backend 
+	- Setup the application
+	- install requirements
+	- setup git repository 
+	- Start development 
+
+-- Setup Django application 
+	- installing Django on global python environment using command pip install django  ---- ON time on a machine
+	- start a project - django-admin startproject <PROJECT NAME>
+	- Setting up the virtual environment for the project
+	- installing Django again in the environment using pip install Django
+
+-- Before moving with the installation of the application, we must look after the two famous ways of developing APIs 
+	- Using basic Django to develop routes for and return json response instead of html response
+	- Using a more standard way by using a framework of Django i.e. djangorestframework, which provided all the amenities required for developing APIs and developing more scalable and manageable application
+
+
+-- We decided to go with djangorestframework
+-- We are not planning to use any user login and signup
+
+-- Installation 
+	-- install djangorestframework using command pip install djangorestframework
+
+-- Start creating apps into the Django application 
+	- Use command python manage.py startapp <APP_NAME>
+
+###########################################################################
+
+- React Frontend 
+	- setup the application 
+	- install requirements
+	- setup git repository
+	- Start development 
+	- Consume APIs of Django backend 
