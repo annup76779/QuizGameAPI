@@ -12,9 +12,14 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 from pathlib import Path
 import os
+import json
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+
+# loading configuration
+with open(os.path.join(BASE_DIR, 'config.json'), "r") as config_file_object:
+    config = json.load(config_file_object)
 
 
 # Quick-start development settings - unsuitable for production
@@ -81,14 +86,7 @@ WSGI_APPLICATION = 'MySite.wsgi.application'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.mysql",
-        "NAME": "QuizGame",
-        "USER": "root",
-        "PASSWORD": "8Ctz:U6wNZ3>",
-        "HOST": "localhost",
-        "PORT": "3306",
-    }
+    "default": config.get('DB_CONFIG')
 }
 
 
