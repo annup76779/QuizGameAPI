@@ -4,7 +4,7 @@ from django.utils.translation import gettext_lazy as _
 
 # Create your models here.
 class SubjectArea(models.Model):
-    name = models.CharField(max_length=225)  # cannot be null, it is Varchar(225)
+    name = models.CharField(max_length=225, unique=True)  # cannot be null, it is Varchar(225)
 
 
 class Test(models.Model):
